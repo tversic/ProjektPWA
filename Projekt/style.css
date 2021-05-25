@@ -1,0 +1,133 @@
+#headerImage
+{
+    margin-left: 30px;
+    width: 60%;
+}
+header
+{
+    margin: 0;
+    padding: 0px;
+}
+.nav
+{
+    width: 100%;
+    background-color: rgb(100, 97, 97);
+}
+.navListItem
+{
+    display: inline-block;
+    padding: 2%;
+    color: white;
+    text-align: center;
+}
+.navListItem:hover
+{
+    background-color: rgb(119, 116, 116);
+    color:white;
+    text-decoration: none;
+}
+#mainSection
+{
+    width: 100%;
+    background-color: rgb(243, 233, 233);
+    padding-bottom: 3%;
+}
+.head
+{
+    margin-bottom: 3%;
+}
+.arPic
+{
+    width: 100%;
+}
+.articles {
+    padding: 2% 2% 2% 2%;
+    margin: 0% 1px 0% 1px;
+    background-color: white;
+    flex: 1;
+}
+.articleHeader
+{
+    color: red;
+    padding-top: 1%;
+}
+.col-containers 
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+footer
+{
+    background-color: rgb(243, 233, 233);
+    color:rgb(172, 168, 168);
+}
+.podnaslov
+{
+    margin-top: 3%;
+    font-weight: bold;
+    text-align: left;
+}
+#articleMainPic
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+.arsPgs
+{
+    margin-top: 5%;
+}
+.naslovAr
+{
+    text-align: center;
+    padding-bottom: 1%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.articlesContent
+{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: medium;
+    display: block;
+    padding: 2% 4% 5% 5%;
+    margin: 0% 1px 0% 1px;
+    background-color: white;
+    flex: 1;
+}
+.articlesHover:hover
+{
+    transform: scaleY(1.03);
+}
+.aClass
+{
+    display: block;
+}
+#insertForm
+{
+    margin-left: 2%;
+    margin-bottom: 5%;
+}
+@media (max-width: 960px) {
+    .col-containers {
+      flex-direction: column;
+    }
+    #headerImage
+    {
+        display: none;
+    }
+    .navListItem
+    {
+        background-color: rgb(100, 97, 97);
+        margin-top: 1px;
+        padding: 2%;
+        color: white;
+        text-align: center;
+    }
+    .nav
+    {
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+    }
+  }
