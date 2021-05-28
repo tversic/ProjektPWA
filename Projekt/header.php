@@ -14,7 +14,7 @@
                 <a href="http://localhost/Projekt/index.php" class="navListItem col-md-2 col-sm-12 aClass">
                     <li>Home</li>
                 </a>
-                <a href="http://localhost/Projekt/insert.html" class="navListItem col-md-2 col-sm-12">
+                <a href="http://localhost/Projekt/insert.php" class="navListItem col-md-2 col-sm-12 aClass">
                 <li>Insert</li>
                 </a>
                 <li class="navListItem col-md-2 col-sm-12">Economie</li>

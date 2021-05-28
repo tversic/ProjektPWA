@@ -109,6 +109,10 @@ footer
     margin-left: 2%;
     margin-bottom: 5%;
 }
+.hideMe
+{
+    display: none;
+}
 @media (max-width: 960px) {
     .col-containers {
       flex-direction: column;

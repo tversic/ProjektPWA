@@ -160,21 +160,25 @@
             </div>
         </div>
         <section class="row rowDown">
-            <div class="col-containers">
-                <div class="col-md-2"></div>
-                <article class="col-md-2 col-sm-12  articles articlesHover" onclick="opensArticle('articles/rimac.php')">
-                <?php
-                    $sql6 = "SELECT id, naslov, content FROM article WHERE naslov = 'BILL GATES RESPONDS ON AFFAIR WITH EMPLOYEE'";
-                    $result6 = $conn->query($sql6);
-                    $row6 = $result6->fetch_assoc();
-                    echo '<h4 class="articleHeader">'. $row6["naslov"] .'</h4>
-                    <p>
-                        '. substr($row6["content"], 0, 201) . ' ...'.'
-                    </p>';
+            <div class="col-containers">     
+               <div class="col-md-2"></div>
+               <?php
+                    $sql9 = "SELECT id, naslov, content, pictureName, category FROM article WHERE id > 9 and category > 1";
+                    $result9 = mysqli_query($conn, $sql9);
+                    while($row = mysqli_fetch_array($result9))
+                    {
+                        $a = '<article class="col-md-2 col-sm-12 articles articlesHover" id="' . $row["id"] . '"  articles articlesHover" onclick="opensGeneratedArticle(this.id)">';
+                        echo $a;
+                        echo '<img src="images/'.$row["pictureName"].'" alt="article4" class="arPic">';
+                        echo '<h4 class="articleHeader">'. $row['naslov'] .'</h4>
+                        <p>
+                            '. substr($row["content"], 0, 201) . ' ...'.'
+                        </p>';
+                        echo "</article>";
+                    }     
                     $conn->close();
-                ?>
-                </article>
-                <div class="col-md-2"></div>
+                ?> 
+                <div class="col-md-2"></div>;  
             </div>
         </section>
 

@@ -2,6 +2,8 @@ function opensArticle(x)
 {
     window.open(x,"_self");
 }
-$.get("navigation.html", function(data){
-    $("#navigationDiv").replaceWith(data);
-});
+function opensGeneratedArticle(varijabla)
+{
+    window.open("http://localhost/Projekt/generatedArticles.php?param=" + varijabla, "_self");
+    return varijabla;
+}

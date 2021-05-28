@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>    
-    <script type="text/javascript" src="js/javascript.js">
+    <script type="text/javascript" src="../js/javascript.js">
     </script>
 </head>
 <body>
