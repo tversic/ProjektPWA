@@ -143,6 +143,11 @@ textarea {
     font-size:20px;
     width:100%;
 }
+.wide
+{
+    width: 100%;
+    margin-left: 1%;
+}
 @media (max-width: 992px) {
     #select
     {

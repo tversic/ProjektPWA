@@ -10,6 +10,20 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>    
     <script type="text/javascript" src="js/javascript.js">
     </script>
+     <?php
+        session_start();
+        if(!isset($_SESSION["usernaam"]))
+        {
+            echo '<script>
+                window.location.replace("http://localhost/Projekt/login.php");
+            </script>';
+            echo "not logged in";
+        }
+        else
+        {
+            echo "Logged in";
+        }
+    ?>
 </head>
 <body>
     <?php include 'header.php' ?>
@@ -120,7 +134,7 @@
                             
 
                             //$sql2 = "UPDATE article set naslov='$sum', summary='$summary', content='$sadrzaj', pictureName='$picName' where id = $var2";
-                            $sql2 = "UPDATE article set naslov=?, summary=?, content=?, pictureName=? where id = ?";
+                            $sql2 = "UPDATE article SET naslov=?, summary=?, content=?, pictureName=? where id=?";
                             $stmt = mysqli_stmt_init($conn);
 
                             if(mysqli_stmt_prepare($stmt, $sql2))
@@ -129,16 +143,7 @@
                                 mysqli_stmt_execute($stmt);
                                 echo "record sucessfully saved";
                             }
-
-                            /*if ($conn->query($sql2) == TRUE) 
-                            {
-                                header("http://localhost/Projekt/index.php");
-                            } 
-                            else 
-                            {
-                                echo "Error updating record: " . $conn->error;
-                            }
-                            */
+                            
                         }       
                         
                     }

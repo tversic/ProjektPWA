@@ -20,8 +20,12 @@
                 <a href="http://localhost/Projekt/administrator.php" class="navListItem col-md-2 col-sm-12 aClass">
                     <li>Administrator</li>
                 </a>
-                <li class="navListItem col-md-2 col-sm-12">Economie</li>
-                <li class="navListItem col-md-2 col-sm-12">Offers locales</li>
+                <a href="http://localhost/Projekt/login.php" class="navListItem col-md-2 col-sm-12 aClass">
+                    <li>Login/Logout</li>
+                </a>
+                <a href="http://localhost/Projekt/register.php" class="navListItem col-md-2 col-sm-12 aClass">
+                    <li>Register</li>
+                </a>
                 <li class="col-md-1 col-sm-12"></li>
             </ul>
     </div>      

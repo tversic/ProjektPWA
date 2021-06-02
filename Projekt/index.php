@@ -14,12 +14,16 @@
 <body>
 
     <?php 
+        session_start();
         include 'header.php';
         $servername = "localhost";
         $username = "root";
         $password = "root";
         $dbName = "projekt";
-
+        if(isset($_SESSION["usernaam"]))
+        {
+            echo "Current user: " . $_SESSION["usernaam"];
+        }
         $conn = new mysqli($servername, $username, $password, $dbName);
         if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
