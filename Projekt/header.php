@@ -17,8 +17,10 @@
                 <a href="http://localhost/Projekt/insert.php" class="navListItem col-md-2 col-sm-12 aClass">
                 <li>Insert</li>
                 </a>
+                <a href="http://localhost/Projekt/administrator.php" class="navListItem col-md-2 col-sm-12 aClass">
+                    <li>Administrator</li>
+                </a>
                 <li class="navListItem col-md-2 col-sm-12">Economie</li>
-                <li class="navListItem col-md-2 col-sm-12">Administracija</li>
                 <li class="navListItem col-md-2 col-sm-12">Offers locales</li>
                 <li class="col-md-1 col-sm-12"></li>
             </ul>

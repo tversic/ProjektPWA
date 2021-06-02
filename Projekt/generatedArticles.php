@@ -26,7 +26,7 @@
         }
 
 
-        $sql = "SELECT id, naslov, content, pictureName FROM article WHERE id = $_id";
+        $sql = "SELECT id, naslov, content, pictureName, summary FROM article WHERE id = $_id";
         $result = $conn->query($sql);
         $row  = $result->fetch_assoc();
         $imgSrc = "";
@@ -39,7 +39,9 @@
                     <section class="row ">
                         <div class="col-md-2"></div>
                         <article class="col-md-8 col-sm-12 articles">
-                            <img src="images/'.$row["summary"].'" alt="mcgregor" id="articleMainPic">
+                            <div class="col-md-2"></div>
+                            <h1 class="col-md-8 articles naslovAr">'.$row["summary"].'</h1>
+                            <div class="col-md-2"></div>
                         </article>
                         <div class="col-md-2"></div>
                     </section>
@@ -53,7 +55,7 @@
                     <section class="row">
                     <div class="col-md-2"></div>
                          <p class="col-md-8 articlesContent">
-                            '. substr($row["content"], 0, 201) .'...'.'
+                            '.$row["content"] .'...'.'
                         </p>
                     <div class="col-md-2"></div>
                     </section>

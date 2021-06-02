@@ -47,16 +47,33 @@
     echo "nesto " .$picName;
     $idCat = $_POST["cat"];
 
-    $sql = "INSERT INTO article(naslov, content, pictureName, summary, category) VALUES('$naslov', '$content', '$picName', '$summary', '$idCat')";
-    if ($conn->query($sql) == TRUE) 
+    if(!isset($_POST["arh"]))
     {
-        echo "success";
-        
-    } 
-    else 
+        $sql = "INSERT INTO article(naslov, content, pictureName, summary, category, arhiva) VALUES('$naslov', '$content', '$picName', '$summary', '$idCat', 0)";
+        if ($conn->query($sql) == TRUE) 
+        {
+            echo "success";
+            
+        } 
+        else 
+        {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        } 
+    }
+    else
     {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    } 
+        $sql = "INSERT INTO article(naslov, content, pictureName, summary, category, arhiva) VALUES('$naslov', '$content', '$picName', '$summary', '$idCat', 1)";
+        if ($conn->query($sql) == TRUE) 
+        {
+            echo "success";
+            
+        } 
+        else 
+        {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        } 
+    }
+    
 
     $conn->close();
     header("Location: http://localhost/Projekt/index.php");

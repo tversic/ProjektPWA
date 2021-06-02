@@ -113,7 +113,45 @@ footer
 {
     display: none;
 }
-@media (max-width: 960px) {
+#select
+{
+    display: block;
+    width: 100%;
+    padding: 2%;
+    text-align: center;
+    margin: 1%;
+}
+#slectMe
+{
+    display: block;
+    margin: 1%;
+    width: 100%;
+    padding: 1%;
+}
+#txtArea
+{
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+.wrapper {
+    padding: 20px;
+    margin:15px 0;
+    background-color: #a7aaa9;
+}
+textarea {
+    font-size:20px;
+    width:100%;
+}
+@media (max-width: 992px) {
+    #select
+    {
+        display: block;
+        padding: 2%;
+        text-align: center;
+        margin: 1%;
+        margin-right: 3%;
+    }
     .col-containers {
       flex-direction: column;
     }
