@@ -43,54 +43,54 @@
             <input type="submit" value="Publish">
         </form>
         <script type="text/javascript">
-    $(function()
-    {
-      $("form[name ='forma']").validate
-      ({
-        rules: {
-          naslov: 
+          $(function()
           {
-            required: true,
-            minlength: 5,
-            maxlength: 30,
-          },
-          summary:
-          {
-            required: true,
-            minlength: 10,
-            maxlength: 100,
-          },
-          content:
-          {
-            required: true,
-          },
-        },
-        messages: 
-        {
-          naslov:
-          {
-            required: "<br>Naslov ne smije biti prazan", 
-            minlength: "<br> nesmije biti manji od 5 znakova",
-            maxlength: "<br>Naslov nesmije biti veći od 30 znakova",
-          },
-          summary:
-          {
-            required: "<br>summary polje ne smije biti prazno",
-            minlength: "<br>summary polje nesmije biti manji od 10 znakova",
-            maxlength: "<br>summary polje nesmije biti veći od 100 znakova",
-          },
-          content:
-          {
-            required: "<br>content polje ne smije biti prazna",
-          },
-        },
-        submitHandler: function(form) 
-        {
-          form.submit();
-        }
-      });
-    });
-  </script>
+            $("form[name ='forma']").validate
+            ({
+              rules: {
+                naslov: 
+                {
+                  required: true,
+                  minlength: 5,
+                  maxlength: 30,
+                },
+                summary:
+                {
+                  required: true,
+                  minlength: 10,
+                  maxlength: 100,
+                },
+                content:
+                {
+                  required: true,
+                },
+              },
+              messages: 
+              {
+                naslov:
+                {
+                  required: "<br>Naslov ne smije biti prazan", 
+                  minlength: "<br> nesmije biti manji od 5 znakova",
+                  maxlength: "<br>Naslov nesmije biti veći od 30 znakova",
+                },
+                summary:
+                {
+                  required: "<br>summary polje ne smije biti prazno",
+                  minlength: "<br>summary polje nesmije biti manji od 10 znakova",
+                  maxlength: "<br>summary polje nesmije biti veći od 100 znakova",
+                },
+                content:
+                {
+                  required: "<br>content polje ne smije biti prazna",
+                },
+              },
+              submitHandler: function(form) 
+              {
+                form.submit();
+              }
+            });
+          });
+        </script>
     </div>
     <?php include 'footer.php' ?>
 </body>

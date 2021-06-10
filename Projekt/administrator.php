@@ -19,6 +19,13 @@
             </script>';
             echo "not logged in";
         }
+        else if( $_SESSION["perm"] == 0)
+        {
+            echo '<script>
+                alert("Nemate prava za pristup ovoj stranici molimo ulogirajte se kao administrator!")
+                window.location.replace("http://localhost/Projekt/login.php");
+            </script>';
+        }
         else
         {
             echo "Logged in";

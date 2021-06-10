@@ -49,9 +49,14 @@
 
     if(!isset($_POST["arh"]))
     {
-        $sql = "INSERT INTO article(naslov, content, pictureName, summary, category, arhiva) VALUES('$naslov', '$content', '$picName', '$summary', '$idCat', 0)";
-        if ($conn->query($sql) == TRUE) 
+        //$sql = "INSERT INTO article(naslov, content, pictureName, summary, category, arhiva) VALUES('$naslov', '$content', '$picName', '$summary', '$idCat', 0)";
+        $sql = "INSERT INTO article(naslov, content, pictureName, summary, category, arhiva) VALUES(?, ?, ?, ?, ?, ?)";
+        $stmt = mysqli_stmt_init($conn);
+        if (mysqli_stmt_prepare($stmt, $sql)) 
         {
+            $nula = 0;
+            mysqli_stmt_bind_param($stmt, 'sssssi', $naslov, $content, $picName, $summary, $idCat, $nula);
+            mysqli_stmt_execute($stmt);
             echo "success";
             
         } 
@@ -62,9 +67,13 @@
     }
     else
     {
-        $sql = "INSERT INTO article(naslov, content, pictureName, summary, category, arhiva) VALUES('$naslov', '$content', '$picName', '$summary', '$idCat', 1)";
-        if ($conn->query($sql) == TRUE) 
+        $jedan = 1;
+        $sql = "INSERT INTO article(naslov, content, pictureName, summary, category, arhiva) VALUES(?, ?, ?, ?, ?, ?)";
+        $stmt = mysqli_stmt_init($conn);
+        if (mysqli_stmt_prepare($stmt, $sql)) 
         {
+            mysqli_stmt_bind_param($stmt, 'sssssi', $naslov, $content, $picName, $summary, $idCat, $jedan);
+            mysqli_stmt_execute($stmt);
             echo "success";
             
         } 
